@@ -19,21 +19,17 @@ class _DropdownlisttaskState extends State<Dropdownlisttask> {
         height: 60,
         width: MediaQuery.sizeOf(context).width,
         decoration: BoxDecoration(
-          
             color: const Color.fromARGB(255, 232, 230, 222),
             borderRadius: BorderRadius.circular(10)),
-            
         child: DropdownButton(
             isExpanded: true,
-            icon: const Icon(
-              
-              Icons.keyboard_arrow_down,
-              size: 30,
-              
-            
-            ),
-            
-          
+            // icon: const Icon(
+
+            //   // Icons.keyboard_arrow_down,
+            //   // size: 30,
+
+            // ),
+
             value: _initialitem,
             onTap: () {},
             onChanged: (String? changevalue) {
@@ -43,13 +39,10 @@ class _DropdownlisttaskState extends State<Dropdownlisttask> {
             },
             items: _itemlist.map((uservalue) {
               return DropdownMenuItem(
-                
                   value: uservalue,
-                  
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Text((uservalue)),
-                    
                   ));
             }).toList()),
       ),
